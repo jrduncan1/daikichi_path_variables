@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DaikichiController {
 	
-	@RequestMapping("/travel/{destination}")
+	@RequestMapping("/daikichi/travel/{destination}")
 	public String travel(@PathVariable("destination") String destination) {
 		return "Congratulations! You will soon travel to " + destination + "!";
 	}
 	
-	@RequestMapping("/lotto/{num}")
+	@RequestMapping("/daikichi/lotto/{num}")
 	public String lotto(@PathVariable("num") int num) {
 		if(num % 2 == 0) {
 			return "You will take a grand journey in the near future, but be wary of tempting offers";
